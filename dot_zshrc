@@ -123,8 +123,8 @@ alias g="git"
 # alias cd="zoxide"
 
 # OH-MY-POSH
-# eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh.json)"
-eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.oh-my-posh.json)"
+# eval "$(oh-my-posh init zsh)"
 
 # fnm
 FNM_PATH="/Users/bisso/Library/Application Support/fnm"
@@ -214,5 +214,11 @@ export CPPFLAGS="-I/opt/homebrew/opt/sqlite/include"
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
 # Zoxide
-eval "$(zoxide init --cmd cd zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
 # eval "$(zoxide init zsh)"
+eval "${$(zoxide init zsh):s#_files -/#_cd#}"
+alias cd=z
+
+# Java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
