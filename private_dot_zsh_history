@@ -29,7 +29,6 @@ brew install --cask ark
 brew install --cask arc
 brew install --cask geekbench
 brew install --cask steam
-softwareupdate --install-rosetta --agree-to-license
 git
 git --version
 brew install git
@@ -43,7 +42,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 1password
 1p
-op
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 cp new-machine-stuff/oh-my-posh.json ~/
 cd ~
@@ -53,11 +51,9 @@ oh-my-posh config import --help
 oh-my-posh config migrate -c ~/.config/oh-my-posh.json 
 oh-my-posh init --config ~/.config/oh-my-posh.json
 oh-my-posh migrate zsh --config ~/.config/oh-my-posh.json
-oh-my-posh help
 oh-my-posh config 
 oh-my-posh config migrate --help
 brew install --cask google-drive
-oh-my-posh config
 oh-my-posh config migrate
 brew update
 brew upgrade
@@ -74,7 +70,6 @@ oh-my-posh upgrade
 oh-my-posh enable
 oh-my-posh enable notice
 oh-my-posh enable upgrade
-oh-my-posh
 rm oh-my-posh.json
 oh-my-posh init zsh
 ic
@@ -102,26 +97,21 @@ echo $FNM_PATH
 zsh
 fnm use
 fnm use 22
-cd wendys
 git clone https://gitlab.com/wendys/wms/orderingsite.git
 git@gitlab.com:wendys/wms/orderingsite.git
 git clone git@gitlab.com:wendys/wms/orderingsite.git
 fnm
 mkdir .dotfiles
 git config --global init.defaultBranch main
-rm -rf .git
 git init
 corepack enable npm
 npm i -g npm
 corepack enable pnpm
 pnpm setup
-pnpm i -g pnpm
 cd ../
 npm i
 sudo vim /etc/hosts
-npm run local:test -- --open false
 code ~/.zshrc
-cd
 cp ~/.zshrc ~/.zshrc.bak
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 zinit self-update
@@ -132,7 +122,6 @@ cd .oh-my-zsh
 uninstall_oh_my_zsh
 rm .oh-my-zsh
 rm -rf .oh-my-zsh
-ls -l
 ls -la
 ls -lH
 cd wendys/orderingsite
@@ -153,8 +142,6 @@ gh auth
 gh auth login
 gh
 brew install fzf
-ls
-l
 la
 ls -laH
 vim .vimrc
@@ -174,60 +161,180 @@ rm -rf .dotfiles
 brew install tofi
 rm ~/.zcompdump*; compinit
 z wendys/orderingsite
-z orderingsite
 z wendys
 z Downloads
 z
 z dev
-ll
 mate
 vim
 fzf
 zi 
 z -i
 z --help
-source ~/.zshrc
 brew install neovim
 neovim
 nvim
-cd orderingsite
 cd --help
 zi
 zix
+cd wendys
+cd ~/Library/Mobile\ Documents/com~apple~CloudDocs
 cdi
+cd com apple
+brew install --cask hyperkey
+zoxide add ~/Library/Mobile\ Documents/com~apple~CloudDocs
+zoxide --help
+zoxide init --help
+which cd
+which cdi
+bat --list-themes | fzf --preview="bat --theme={} --color=always"
+bat --list-themes | fzf --preview="bat --theme={} --color=always ./OfferItem.tsx"
+bat --list-themes | fzf --preview="bat --theme={} --color=always ~/dev/wendys/orderingsite/src/site/js/Loyalty/OfferItem/OfferItem.tsx"
+bat --list-themes | fzf --preview="bat --theme={} --color=always ~/dev/wendys/orderingsite/src/site/js/Loyalty/Offer/OfferItem/OfferItem.tsx"
+bat src/site/js/Loyalty/Offer/OfferItem/OfferItem.tsx
+brew install chezmoi
+chezmoi init
+chezmoi add .zshrc
+chezmoi add .zshrc.bak
+chezmoi add .zprofile
+chezmoi add .zsh_history
+chezmoi add .zsh_sessions
+chezmoi edit dot_zprofile
+chezmoi edit .zprofile
+chezmoi edit ~/.zprofile
+nvim .zcompdump
+chezmoi ~/.zcompdump
+chezmoi add ~/.zcompdump
+chezmoi add .vscode
+chezmoi remove .vscode
+chezmoi forget .vscode
+ll chezmoi
+l
+ls
+ls -l
+ls -a
+chezmoi .config
+chezmoi add .config
+chezmoi add .gitconfig
+chezmoi add .iterm2
+chezmoi add .ssh
+chezmoi add .viminfo
+git config --global user.name "Bisso"
+git config --global user.email "23.comitiva.cachimbo@icloud.com"
+git commit -m "First files"
+git remote add origin https://codeberg.org/bsides/dotfiles.git\
+git push -u origin main
+op 
+op signin
+op
+op whoami
+bat ~/.ssh/agent
+bat ~/.ssh/config
+op item create --category ssh --title "Codeberg SSH"
+op read "op://Private/ssh keys/ssh key/private key?ssh-format=openssh"
+op read xdxzg24l6z5ift73notf5iku74
+git push -u main
+git remote remove origin
+git remote add origin git@codeberg.org:bsides/dotfiles.git
+git push -u origin main
+cp ~/.config/oh-my-posh.json .
+chezmoi add oh-my-posh.json
+git commit -m "Adds oh-my-posh config"
+oh-my-posh config
+oh-my-posh
+oh-my-posh help
+oh-my-posh get shell
+code ~/oh-my-posh.json
+mv oh-my-posh.json .oh-my-posh.json
+chezmoi add .oh-my-posh.json
+chezmoi forget oh-my-posh.json
+es
+chezmoi cd
+git add .
+git commit -m "Renames oh-my-posh config and re-add"
+git push
+code ~/.oh-my-posh.json
 cd query
+cd order**
+cd orderinsite
+cdpath
+cd orderingsitez
+z orderingsite
+git pull
+rm -rf .git
+source ~/.zshrc
+brew install cinebench
+mkcert order-dev.wendys.com order-test.wendys.com order-pe.wendys.com order-pqa.wendys.com order.wendys.com
+mv order*.wendys.com ./key
+mv order**.wendys.com ./key
+npm run test
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. "$HOME/.cargo/env"
+cargo
+cargo new hello-rust
+cd hello-rust
+code .
+softwareupdate --install-rosetta --agree-to-license
+brew install --cask battle-net
+brew install --cask battle-net --force
+battle-net
 cd dev
-: 1737628958:0;cd wendys
-: 1737628960:0;cd orderingsite
-: 1737628962:0;cd
-: 1737628966:0;cd orderingsite
-: 1737628968:0;cd
-: 1737628986:0;cdi
-: 1737629015:0;cd ~/Library/Mobile\ Documents/com~apple~CloudDocs
-: 1737629018:0;cd
-: 1737629021:0;cdi
-: 1737629032:0;cd com apple
-: 1737629038:0;cd orderingsite
-: 1737629580:0;brew install --cask hyperkey
-: 1737630193:0;zoxide add ~/Library/Mobile\ Documents/com~apple~CloudDocs
-: 1737630211:0;cd
-: 1737630292:0;zoxide --help
-: 1737630298:0;zoxide init --help
-: 1737630347:0;which cd
-: 1737630354:0;which cdi
-: 1737631688:0;cd orderingsite
-: 1737631691:0;ll
-: 1737631736:0;bat src/site/js/Loyalty/Offer/OfferItem/OfferItem.tsx
-: 1737631793:0;bat --list-themes | fzf --preview="bat --theme={} --color=always"
-: 1737631805:0;bat --list-themes | fzf --preview="bat --theme={} --color=always ./OfferItem.tsx"
-: 1737631836:0;bat --list-themes | fzf --preview="bat --theme={} --color=always ~/dev/wendys/orderingsite/src/site/js/Loyalty/OfferItem/OfferItem.tsx"
-: 1737631865:0;bat --list-themes | fzf --preview="bat --theme={} --color=always ~/dev/wendys/orderingsite/src/site/js/Loyalty/Offer/OfferItem/OfferItem.tsx"
-: 1737631897:0;bat src/site/js/Loyalty/Offer/OfferItem/OfferItem.tsx
-: 1737633155:0;brew install chezmoi
-: 1737633188:0;cd
-: 1737633193:0;chezmoi init
-: 1737633211:0;chezmoi add .zshrc
-: 1737633214:0;ll
-: 1737633219:0;chezmoi add .zshrc.bak
-: 1737633224:0;chezmoi add .zprofile
-: 1737633230:0;chezmoi add .zsh_history
+ll
+gh repo clone bsides/codenome-kartinha
+gh repo clone bsides/ptcgp-db
+cd ptcgp-db
+pnpm 
+pnpm -g pnpm
+pnpm i -g pnpm
+cd
+cd orderingsite
+g pull
+npm run local:test -- --open false
+sudo spctl --master-disable
+defaults write com.apple.dock appswitcher-all-displays -bool true\
+killall Dock
+touch ~/.mac-options
+code ~/.mac-options
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 3
+killall finder
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+osascript -e 'tell application "Finder" to quit'
+mv ~/.mac-options ~/.macos
+code ~/.macos
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+source ~/.macos
+/Volumes/CrossOver\ 24.0.6/Open\ Gatekeeper\ friendly ; exit;
+/Users/bisso/Desktop/Extra/croslic/license.tool ; exit;
+: 1738060887:0;g pull
+: 1738060894:0;npm run local:test -- --open false
+: 1738071682:0;brew install java
+: 1738071786:0;sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+: 1738071801:0;echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+: 1738071806:0;export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+: 1738071820:0;nvim ~/.zshrc
+: 1738071931:0;chezmoi cd
+: 1738071935:0;git status
+: 1738071948:0;chezmoi ~/.zsh
+: 1738071950:0;chezmoi ~/.zshrc
+: 1738071954:0;chezmoi add ~/.zshrc
+: 1738071957:0;ll
+: 1738071959:0;g status
+: 1738071962:0;git add .
+: 1738071969:0;git commit -m "More config"
+: 1738071971:0;git push
+: 1738071993:0;npm run local:test -- --open false
+: 1738071996:0;git push
+: 1738072010:0;git remote -l
+: 1738072012:0;git remote -v
+: 1738072356:0;git remove rename origin codeberg
+: 1738072362:0;git rename origin codeberg
+: 1738072368:0;git remote rename origin codeberg
+: 1738072443:0;git remote add origin https://github.com/bsides/dotfiles.git
+: 1738072448:0;git push -u origin main
+: 1738072598:0;git pull
+: 1738072602:0;ll
+: 1738072647:0;cd ..
+: 1738072650:0;cd
+: 1738072651:0;ll
+: 1738072690:0;chezmoi add .zprofile .zsh_history .zsh_sessions .zshenv .profile .oh-my-posh.json .macos .gitconfig

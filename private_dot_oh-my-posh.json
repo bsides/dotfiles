@@ -103,9 +103,7 @@
           "background": "p:blue",
           "type": "status",
           "style": "diamond",
-          "background_templates": [
-            "{{ if gt .Code 0 }}p:red{{ end }}"
-          ]
+          "background_templates": ["{{ if gt .Code 0 }}p:red{{ end }}"]
         }
       ]
     },
@@ -119,7 +117,7 @@
             "fetch_package_manager": false,
             "home_enabled": false
           },
-          "template": "\ue718 ",
+          "template": "\ue718 {{ .Full }} ",
           "foreground": "p:green",
           "background": "transparent",
           "type": "node",
@@ -149,21 +147,21 @@
           "type": "python",
           "style": "plain"
         },
+        // {
+        //   "properties": {
+        //     "cache_duration": "none"
+        //   },
+        //   "template": "<p:blue><b>{{ .Name }}</b></> ",
+        //   "foreground": "p:white",
+        //   "background": "transparent",
+        //   "type": "shell",
+        //   "style": "plain"
+        // },
         {
           "properties": {
             "cache_duration": "none"
           },
-          "template": "in <p:blue><b>{{ .Name }}</b></> ",
-          "foreground": "p:white",
-          "background": "transparent",
-          "type": "shell",
-          "style": "plain"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": "at <p:blue><b>{{ .CurrentDate | date \"15:04:05\" }}</b></>",
+          "template": " <p:blue>⏱\udb85\udc43 <b>{{ .CurrentDate | date \"15:04:05\" }}</b></>",
           "foreground": "p:white",
           "background": "transparent",
           "type": "time",
@@ -184,9 +182,7 @@
       "background": "p:orange",
       "type": "aws",
       "style": "diamond",
-      "tips": [
-        "aws"
-      ]
+      "tips": ["aws"]
     },
     {
       "properties": {
@@ -199,9 +195,7 @@
       "background": "p:blue",
       "type": "az",
       "style": "diamond",
-      "tips": [
-        "az"
-      ]
+      "tips": ["az"]
     }
   ],
   "version": 3,
